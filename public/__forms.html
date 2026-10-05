@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Forms</title></head>
+<body>
+  <!--
+    Netlify reads this static file at deploy time to register the "interest" form.
+    The visible form lives in app/components/InterestForm.tsx and posts here.
+    Keep the field names in both places in sync.
+  -->
+  <form name="interest" method="POST" data-netlify="true" netlify-honeypot="company_website" hidden>
+    <input type="hidden" name="form-name" value="interest">
+    <input name="company_website">
+    <input name="name">
+    <input name="email" type="email">
+    <input name="organization">
+    <select name="role">
+      <option>Ministry of Health / EPI program</option>
+      <option>Funder or donor</option>
+      <option>Implementing partner / NGO</option>
+      <option>Researcher or academic</option>
+      <option>Other</option>
+    </select>
+    <input name="country">
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

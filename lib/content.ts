@@ -1,7 +1,6 @@
 // All site copy lives here so it can be edited without touching layout code.
 
 export const DEMO_URL = "https://vaxhub-prototype.vercel.app/login";
-export const CONTACT = { name: "Noel Watson", title: "Founder & CEO", email: "nwatson@opsmend.com" };
 
 export const problems = [
   { icon: "chart", title: "Inaccurate forecasts", text: "Stockouts cause missed vaccinations and equity gaps. Overstock leads to costly expiry and waste." },

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Icon, IconSprite } from "./components/Icons";
 import WorkflowExplorer from "./components/WorkflowExplorer";
-import CopyEmail from "./components/CopyEmail";
+import InterestForm from "./components/InterestForm";
 import {
-  DEMO_URL, CONTACT, problems, principles, stats, audiences, commodities,
+  DEMO_URL, problems, principles, stats, audiences, commodities,
   roadmap, tiers, team,
 } from "@/lib/content";
 
@@ -219,13 +219,10 @@ export default function Home() {
             <div className="sechead" style={{ margin: 0 }}>
               <p className="eyebrow">Let&apos;s talk</p>
               <h2 className="h2">Help shape the standard for global health supply chains.</h2>
-              <p className="lede">Ministries, funders and implementing partners: we&apos;d like to tailor Akiba Health to your priorities.</p>
+              <p className="lede">Ministries, funders and implementing partners: tell us a little about your work and we&apos;ll follow up to tailor Akiba Health to your priorities.</p>
+              <a className="btn dark" href={DEMO_URL} style={{ justifySelf: "start", marginTop: 8 }}>Explore the live demo →</a>
             </div>
-            <div className="contact-card">
-              <p><b>{CONTACT.name}</b>, {CONTACT.title}</p>
-              <CopyEmail email={CONTACT.email} />
-              <a className="btn dark" href={DEMO_URL} style={{ justifySelf: "start" }}>Explore the live demo →</a>
-            </div>
+            <InterestForm />
           </div>
         </section>
       </main>

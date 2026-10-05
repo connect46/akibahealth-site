@@ -36,3 +36,11 @@ Custom domain DNS (at iwantmyname):
 - Funding/ask content is intentionally kept out of the site; it lives only in the pitch deck.
 - Product screenshots are March 2026 captures of the prototype (Kenya demo data). Replace with fresh captures when available.
 - Abhijit's headshot is 100×100 px; swap in a higher-resolution photo.
+
+## Interest form (Netlify Forms)
+
+- The "Register interest" form (`app/components/InterestForm.tsx`) posts to Netlify Forms. Netlify registers it from
+  `public/__forms.html` at deploy time; keep field names in both files in sync.
+- Spam protection: a hidden honeypot field (`company_website`). Netlify drops any submission that fills it.
+- Submissions appear in Netlify under **Forms → interest**. Set up email alerts in **Project configuration → Notifications → Emails and webhooks → Form submission notifications**.
+- Make sure **Form detection** is enabled (Netlify → Forms). Netlify only detects forms on deploys made after it's turned on.
